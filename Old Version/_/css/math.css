@@ -1,0 +1,672 @@
+/* INFORMATION 
+
+*** Color Guide  ***
+
+rgba(242,242,242,1) 	Light Grey 	*Global Background
+rgba(162, 164, 167,1)	Dark Grey 	*Borders
+rgba(226,107,38,1) 		Orange		*Headers / incopy links
+rgba(143,91,32,1)		Brown		*Button backgrounds
+rgba(51,51,51,1)		Blackish	*Copy
+
+
+*/
+
+header, nav, section, article, aside, footer, figure, figcaption {
+	display: block;
+}
+body, html, h1, h2, h3, h4, h5, h6, h7, p, div, section, article, aside, nav, header, footer, img, a {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Clearfix */
+/* for modern browsers */
+.cf:before,
+.cf:after {
+	content:"";
+	display: table;	
+	
+}
+.cf:after {
+	clear:both;
+}
+
+/* for IE 6/7 (trigger hasLayout) */
+.cf {
+	zoom:1;
+}
+/* end Clearfix */
+
+
+#globalWrapper {
+	font-family: "Comic Sans MS", cursive;
+	width: 960px;
+	min-height: 800px;
+	margin: 15px auto;
+	background-color: rgb(242,242,242);
+	color: rgb(51,51,51);
+	border: 5px solid rgb(162, 164, 167);
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius:15px;
+	box-shadow: #666 3px 3px 10px;
+}
+
+.globalHeader {
+	margin: 5px 0 0 0;	
+	
+}
+html {
+	/* [disabled]background-color: rgba(255,229,198,1); */
+}
+header {
+	text-align: center;
+	font-family: "Comic Sans MS", cursive;
+}
+header h1 a:link , header h1 a:visited{
+	color: rgb(226,107,38);
+	text-decoration: none;
+	font-size: 1.8em;
+}
+header h1 a:hover, header h1 a:active {
+	font-style: italic;
+}
+nav {
+	width: 700px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: "Comic Sans MS", cursive;
+}
+nav ul li {
+	display: inline;
+	letter-spacing: 0.2em;
+}
+nav ul li a {
+	text-decoration: none;
+	padding: 0 10px;
+}
+nav ul li a:link, nav ul li a:visited {
+	color: #fff;
+	background-color: rgb(143,91,32);
+	border: 4px solid rgb(162, 164, 167);
+	padding: 10px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius:15px;
+}
+nav ul li a:hover, nav ul li a:active {
+	background-color: rgb(221,105,36);
+	font-style: italic;
+}
+#currentPage {
+	background-color: rgb(221,105,36);
+}
+.colLeft h3  {
+	text-align: center;
+	margin-top: 10px;
+}
+.colLeft article {
+	margin-top: 40px;
+}
+.colLeft {
+	width: 500px;
+	float: left;
+	margin: 10px 80px 0 60px;
+	min-height: 400px;
+}
+
+/***** Basic Arithmatic Styling *******/
+.arithInput {
+	width: 463px;
+	padding-left: 37px;	
+}
+
+.arithButtonsDiv {
+	width: 385px;
+	padding-left: 115px;
+	margin: 5px 0 0 0;	
+}
+
+.arithButton {
+	width: 200px;
+	color: #fff;
+	background-color: rgb(143,91,32);
+	border: 4px solid rgb(162, 164, 167);
+	text-align: center;
+	line-height: 1.2em;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius:15px;
+	font-family: "Comic Sans MS", cursive;	
+	
+}
+
+.arithButton:hover, .arithButton:active {
+	background-color: rgb(221,105,36);	
+}
+
+.oneCol {
+	min-height: 400px;
+	margin-bottom: 50px;
+	margin-top: 10px;
+	float: left;
+}
+.content .colLeft h3 {
+	color: rgb(226,107,38);
+}
+.colLeft p {
+	/* [disabled]text-indent: 2.5em; */
+	padding: 10px 10px 0 10px;
+	text-align: justify;
+}
+.content .colLeft p a:link , .content .colLeft p a:visited{
+	text-decoration: none;
+	color: rgb(226,107,38);
+}
+.content .colLeft p a:hover , .content .colLeft p a:active{
+	font-style:italic;
+}
+.colRight {
+	width: 300px;
+	float: left;
+	margin: 30px 0 20px 0;
+	min-height: 400px;
+}
+.colRight #calcPNG {
+	margin: 85px auto 0px;
+	display: block;
+}
+.colRight h3 {
+	text-align: center;
+}
+.colRight h4 {
+	text-align: center;
+}
+.expenseButtonsDiv {
+	width: 470px;
+	padding-left: 30px;
+}
+.expenseButtons {
+	width: 210px;
+	/* [disabled]margin: 0 0 0 30px; */	;
+	/* [disabled]display: block; */
+	color: #fff;
+	background-color: rgb(143,91,32);
+	border: 4px solid rgb(162, 164, 167);
+	text-align: center;
+	line-height: 1.2em;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius:15px;
+	font-family: "Comic Sans MS", cursive;
+}
+
+.expenseButtons:hover, .expenseButtons:active {
+	background-color: rgb(221,105,36);	
+}
+
+#budgetTotal {
+	display: block;
+	width: 150px;
+	margin: 5px auto;
+	text-align: center;
+}
+#expenses {
+	display: block;
+	width: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	text-align: center;
+}
+#leftOver {
+	display: block;
+	width: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5px;
+	text-align: center;
+}
+
+.submit {
+	width: 100px;
+	margin: 0 auto;
+	display: block;
+	color: #fff;
+	background-color: rgb(143,91,32);
+	border: 4px solid rgb(162, 164, 167);
+	text-align: center;
+	line-height: 1.2em;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius:15px;
+	font-family: "Comic Sans MS", cursive;
+}
+.reset {
+	width: 100px;
+	margin: 0 auto;
+	display: block;
+	color: #fff;
+	background-color: rgb(143,91,32);
+	border: 4px solid rgb(162, 164, 167);
+	text-align: center;
+	line-height: 1.2em;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius:15px;
+	font-family: "Comic Sans MS", cursive;
+}
+.submit:hover, .submit:active {
+	background-color: rgb(221,105,36);
+}
+#quickAddition, #quickSubtraction, #quickMult, #quickDiv {
+	width: 160px;
+	height:130px;
+	/* [disabled]margin: 0 0 10px 0; */
+	float: left;
+}
+footer {
+	float:left;
+	clear: both;
+	width: 960px;
+	height:200px;
+	margin: 20px 0 0 0;
+	/* [disabled]background-color: rgba(255,255,247,1); */
+}
+.quickCalc {
+	width: 160px;
+	/* [disabled]margin-bottom: 20px; */
+	height: 125px;
+	float: left;
+}
+.quickCalcInput {
+	text-align: center;
+	width: 100px;
+	margin: 0px auto 5px;
+	display: block;
+}
+.quickCalcAnswer {
+	text-align: center;
+	display: block;
+	width: 75px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#footLeft {
+	width:660px;
+	height:180px;
+	float: left;
+	overflow:hidden;
+	/* [disabled]padding: 10px 0 0 0; */
+}
+#footLeft h4 , #footLeft h3{
+	text-align: center;
+	color: rgb(226,107,38);
+}
+
+#footRight {
+	width:300px;
+	height:180px;
+	/* margin: 20px 0 0 0; */
+	float: left;
+	overflow: hidden;
+}
+#contactUs{
+	margin: 0 0 10px 0;	
+}
+.contactHeader {
+	text-align: center;
+	color: rgb(226,107,38);
+}
+.contactInfo  {
+	text-align: center;
+	color: rgb(51,51,51);
+	font-size: 0.8em;
+}
+
+#socialMedia {
+	width:160px;
+	margin: 0 auto;	
+}
+
+#socialMedia p {
+	text-align: center;
+	color: rgb(226,107,38);
+}
+
+#socialMediaLinks {
+	width: 140px;
+	margin: 0 auto;	
+}
+
+#socialMediaLinks a:link, #socialMediaLinks a:visited, #socialMediaLinks a:hover, #socialMediaLinks a:active { 
+	color: rgb(242,242,242);
+	border-color: rgb(242,242,242);
+}
+
+.oneCol #socialMediaMessage {
+	width: 500px;
+	margin-right: auto;
+	margin-left: 230px;
+	height: 60px;
+	text-align: center;
+	display: block;
+	margin-top: 177px;
+	float: left;
+	font-size: .9em;
+}
+
+
+
+/**** Quick Quiz Styling *****/
+.colRight h3 {
+	color: rgb(226,107,38);	
+}
+.quickQuizSection input {
+	width: 75px;
+	text-align: center;	
+}
+
+#quickQuiz #submit {
+	width: 200px;
+	display: block;
+	margin: 0 auto;
+	color: #fff;
+	background-color: rgb(143,91,32);
+	border: 4px solid rgb(162, 164, 167);
+	text-align: center;
+	line-height: 1.2em;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius:15px;
+	font-family: "Comic Sans MS", cursive;
+	margin-top: 10px;	
+}
+#quickQuiz #submit:hover, #quickQuiz #submit:active {
+	background-color: rgb(221,105,36);	
+}
+.quickQuizAnswers {
+	margin: 5px 0 0 0;	
+}
+.quickQuizAnswers input{
+	width: 200px;
+	display: block;
+	margin: 0 auto;
+	text-align: center;	
+}
+.decimalPlaces {
+	color: rgb(226,107,38);
+	text-align: center;
+	font-size: 0.7em;
+}
+#decimalPlaces {
+	color: rgb(226,107,38);
+	text-align: center;
+	font-size: 0.7em;
+}
+
+/**** Addition Page Styling *****/
+
+.colLeft    .instructions{
+	text-align: center;	
+}
+
+#additionMain {
+	display: block;
+	margin-top: 20px;
+}
+#additionMain input{
+	width: 125px;
+	/* [disabled]font-size: 0.5em; */
+	text-align: center;
+}
+#additionMain .submit {
+	width: 100px;
+	margin-left: 90px;
+	margin-top: 10px;
+	color: #fff;
+	background-color: rgb(143,91,32);
+	border: 4px solid rgb(162, 164, 167);
+	text-align: center;
+	line-height: 1.2em;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius:15px;
+	font-family: "Comic Sans MS", cursive;
+}
+#additionMain .submit:hover, #additionMain .submit:active {
+	background-color: rgb(221,105,36);
+}
+#additionMultiple #addMultiple {
+	width: 350px;
+	text-align: center;
+	display: block;
+	margin: 20px auto 0 auto;
+}
+#additionMultiple .submit {
+	width: 200px;
+	color: #fff;
+	background-color: rgb(143,91,32);
+	border: 4px solid rgb(162, 164, 167);
+	text-align: center;
+	line-height: 1.2em;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius:15px;
+	font-family: "Comic Sans MS", cursive;
+	margin-top: 10px;
+}
+#additionMultiple .submit:hover, #additionMultiple .submit:active {
+	background-color: rgb(221,105,36);
+	width: 200px;
+}
+#answer {
+	display: block;
+	margin: 5px auto 0 auto;
+	text-align: center;
+	width: 175px;
+}
+
+/**** Subtraction Page Styling */
+
+.colLeft .instructions{
+	text-align: center;	
+}
+
+#subtractionMain {
+	display: block;
+	margin-top: 20px;
+}
+#subtractionMain input{
+	width: 125px;
+	/* [disabled]font-size: 0.5em; */
+	text-align: center;
+}
+#subtractionMain .submit {
+	width: 140px;
+	margin-left: 75px;
+	margin-top: 10px;
+	color: #fff;
+	background-color: rgb(143,91,32);
+	border: 4px solid rgb(162, 164, 167);
+	text-align: center;
+	line-height: 1.2em;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius:15px;
+	font-family: "Comic Sans MS", cursive;
+}
+#subtractionMain .submit:hover, #subtractionMain .submit:active {
+	background-color: rgb(221,105,36);
+}
+#subtractionMultiple #subtractMultiple {
+	width: 350px;
+	text-align: center;
+	display: block;
+	margin: 20px auto 0 auto;
+}
+#subtractionMultiple .submit {
+	width: 200px;
+	color: #fff;
+	background-color: rgb(143,91,32);
+	border: 4px solid rgb(162, 164,167);
+	text-align: center;
+	line-height: 1.2em;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius:15px;
+	font-family: "Comic Sans MS", cursive;
+	margin-top: 10px;
+}
+#subtractionMultiple .submit:hover, #subtractionMultiple .submit:active {
+	background-color: rgb(221,105,36);
+	width: 200px;
+}
+#answer {
+	display: block;
+	margin: 5px auto 0 auto;
+	text-align: center;	
+}
+
+/**** Multiplication Page Styling */
+
+.colLeft .instructions{
+	text-align: center;	
+}
+
+#multiplicationMain {
+	display: block;
+	margin-top: 20px;
+}
+#multiplicationMain input{
+	width: 125px;
+	/* [disabled]font-size: 0.5em; */
+	text-align: center;
+}
+#multiplicationMain .submit {
+	width: 140px;
+	margin-left: 65px;
+	margin-top: 10px;
+	color: #fff;
+	background-color: rgb(143,91,32);
+	border: 4px solid rgb(162, 164, 167);
+	text-align: center;
+	line-height: 1.2em;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius:15px;
+	font-family: "Comic Sans MS", cursive;
+}
+#multiplicationMain .submit:hover, #multiplicationMain .submit:active {
+	background-color: rgb(221,105,36);
+}
+#multiplicationMultiple #multMultiple {
+	width: 350px;
+	text-align: center;
+	display: block;
+	margin: 20px auto 0 auto;
+}
+#multiplicationMultiple .submit {
+	width: 200px;
+	color: #fff;
+	background-color: rgb(143,91,32);
+	border: 4px solid rgb(162, 164, 167);
+	text-align: center;
+	line-height: 1.2em;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius:15px;
+	font-family: "Comic Sans MS", cursive;
+	margin-top: 10px;
+}
+#multiplicationMultiple .submit:hover, #multiplicationMultiple .submit:active {
+	background-color: rgb(221,105,36);
+	width: 200px;
+}
+#answer {
+	display: block;
+	margin: 5px auto 0 auto;
+	text-align: center;	
+}
+
+/**** Division Page Styling */
+
+.colLeft .instructions{
+	text-align: center;	
+}
+
+#divisionMain {
+	display: block;
+	margin-top: 20px;
+}
+#divisionMain input{
+	width: 125px;
+	/* [disabled]font-size: 0.5em; */
+	text-align: center;
+}
+#divisionMain .submit {
+	width: 140px;
+	margin-left: 60px;
+	margin-top: 10px;
+	color: #fff;
+	background-color: rgb(143,91,32);
+	border: 4px solid rgb(162, 164, 167);
+	text-align: center;
+	line-height: 1.2em;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius:15px;
+	font-family: "Comic Sans MS", cursive;
+}
+#divisionMain .submit:hover, #divisionMain .submit:active {
+	background-color: rgb(221,105,36);
+}
+#divisionMultiple #divMultiple {
+	width: 350px;
+	text-align: center;
+	display: block;
+	margin: 20px auto 0 auto;
+}
+#divisionMultiple .submit {
+	width: 200px;
+	color: #fff;
+	background-color: rgb(143,91,32);
+	border: 4px solid rgb(162, 164, 167);
+	text-align: center;
+	line-height: 1.2em;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius:15px;
+	font-family: "Comic Sans MS", cursive;
+	margin-top: 10px;
+}
+#divisionMultiple .submit:hover, #divisionMultiple .submit:active {
+	background-color: rgb(221,105,36);
+	width: 200px;
+}
+#answer {
+	display: block;
+	margin: 5px auto 0 auto;
+	text-align: center;	
+}
+
+::-webkit-input-placeholder {
+	text-align: center;	
+}
+
+:-moz-placeholder {
+	text-align: center;
+}
+
+#multiplicationSign {
+	font-size: .75em;	
+}#browsers {
+	font-size: .8em;
+	margin-top: 45px;
+	text-align: center;
+}
+#browsers .externalLink                  {
+	color: rgb(143,91,32);
+}

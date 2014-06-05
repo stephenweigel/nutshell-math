@@ -1,0 +1,665 @@
+/* 
+    Created on : Jun 26, 2013, 3:03:12 PM
+    Author     : Stephen Weigel
+*/
+
+// Colors //
+$light_grey : rgba(242,242,242,1); // Global Background
+$dark_grey : rgba(162,164,167,1); // Borders
+$orange: rgba(226,107,38,1); // Headers -- incopy links
+$brown: rgba(143,91,32,1); // button backgrounds
+$blackish: rgba(51,51,51,1); // copy
+$white: #fff;
+$red: #f00;
+
+
+$current_page_link_bgcolor: $orange;
+$col_left_p_links_color: $orange;
+$col_right_h3_color: $orange;
+$contact_header_color: $orange;
+$contact_info_color: $blackish;
+$decimal_places_color: $orange;
+$external_link_color: $brown;
+$foot_left_h3h4_color: $orange;
+$global_wrapper_color: $blackish;
+$global_wrapper_bgcolor: $light_grey;
+$header_link_color: $orange;
+$left_col_h3_color: $orange;
+$nav_link_color: $white;
+$nav_link_bgcolor: $brown;
+$nav_link_active_bgcolor: $orange;
+$social_media_links_color: $light_grey;
+$social_media_links_border_color: $light_grey;
+$social_media_p_color: $orange;
+
+
+// Fonts //
+$main_font_stack: "Comic Sans MS", cursive;
+
+// Widths //
+$addition_main_input_width: 125px;
+$addition_main_submit_width: 100px;
+$add_multiple_width: 350px;
+$add_multiple_submit_width: 200px;
+$answer_width: 175px;
+$arith_button_width: 200px;
+$arith_buttons_div_width: 385px;
+$arith_input_width: 463px;
+$budget_total_width: 150px;
+$col_left_width: 500px;
+$col_right_width: 300px;
+$division_main_input_width: 125px;
+$division_main_submit_width: 140px;
+$div_multiple_width: 350px;
+$div_multiple_submit_width: 200px;
+$expenses_width: 300px;
+$expense_buttons_width: 210px;
+$expense_buttons_div_width: 470px;
+$footer_width: 960px;
+$foot_left_width: 660px;
+$foot_right_width: 300px;
+$global_wrapper_width: 960px;
+$multiplication_main_input_width: 125px;
+$multiplication_main_submit_width: 140px;
+$mult_multiple_width: 350px;
+$mult_multiple_submit_width: 200px;
+$quick_calc_width: 160px;
+$quick_calc_input_width: 100px;
+$quick_calc_answer_width: 75px;
+$quick_quiz_answers_input_width: 200px;
+$quick_quiz_section_input_width: 75px;
+$quick_quiz_submit_width: 200px;
+$left_over_width: 300px;
+$nav_width: 700px;
+$quick_width: 160px;
+$reset_width: 100px;
+$social_media_width: 160px;
+$social_media_message_width: 500px;
+$social_media_links_width: 140px;
+$submit_width: 100px;
+$subtraction_main_input_width: 125px;
+$subtraction_main_submit_width: 140px;
+$subtract_multiple_width: 350px;
+$subtraction_multiple_submit_width: 200px;
+
+
+// Heights //
+$col_left_min_height: 460px;
+$col_right_min_height: 400px;
+$footer_height: 200px;
+$foot_left_height: 180px;
+$foot_right_height: 180px;
+$global_wrapper_min_height: 850px;
+$one_col_min_height: 400px;
+$quick_calc_height: 125px;
+$quick_height: 130px;
+$quiz_alerts_min_height: 2em;
+$social_media_message_height: 60px;
+
+// Borders //
+$standard_border: 4px solid $dark_grey;
+$standard_border_radius: 15px;
+$standard_button_border: 4px solid $dark_grey;
+$standard_button_border_radius: 15px;
+
+
+
+$global_wrapper_border: $standard_border;
+$global_wrapper_border_radius: $standard_border_radius;
+$nav_link_border: $standard_border;
+$nav_link_borer_radius: $standard_border_radius;
+
+
+// Mixins //
+@mixin button {
+    color: $white;
+    background-color: $brown;
+    border: $standard_button_border;
+    border-radius: $standard_button_border_radius;
+    font-family: $main_font_stack;
+    line-height: 1.2em;
+    text-align: center;
+    
+    &:hover, &:active {
+        background-color: $orange;
+    }
+}
+
+
+
+// Styles //
+
+// Global Reset //
+body, html, h1, h2, h3, h4, h5, h6, h7, p, div, section, article, aside, nav, header, footer, img, a {
+	margin: 0px;
+	padding: 0px;
+}
+
+// HTML5 Backup //
+header, nav, section, article, aside, footer, figure, figcaption {
+	display: block;
+}
+
+// Clearfix //
+/* for modern browsers */
+.cf:before,
+.cf:after {
+	content:"";
+	display: table;	
+	
+}
+.cf:after {
+	clear:both;
+}
+
+/* for IE 6/7 (trigger hasLayout) */
+.cf {
+	zoom:1;
+}
+/* end Clearfix */
+
+#globalWrapper {
+    font-family: $main_font_stack;
+    width: $global_wrapper_width;
+    min-height: $global_wrapper_min_height;
+    overflow: hidden;
+    margin: 15px auto;
+    background-color: $global_wrapper_bgcolor;
+    color: $global_wrapper_color;
+    border: $global_wrapper_border;
+    border-radius: $global_wrapper_border_radius;
+    box-shadow: $light_grey 3px 3px 10px;
+    
+}
+
+.globalHeader {
+    margin: 5px 0 0 0;
+}
+
+header {
+    text-align: center;
+    font-family: $main_font_stack;
+    
+    h1 {
+        a{
+            &:link, &:visited {
+                color: $header_link_color;
+                text-decoration: none;
+                font-size: 1.8em;
+            }
+            
+            &:hover, &:active {
+                font-style: italic;
+            }
+        }
+    }
+}
+
+nav {
+    width: $nav_width;
+    margin: 0 auto;
+    text-align: center;
+    font-family: $main_font_stack;
+    
+    ul {
+        li {
+            display: inline;
+            letter-spacing: .2em;
+            
+            a {
+                text-decoration: none;
+                padding: 0 10px;
+                
+                &:link, &:visited {
+                    color: $nav_link_color;
+                    background-color: $nav_link_bgcolor;
+                    border: $nav_link_border;
+                    border-radius: $nav_link_borer_radius;
+                    padding: 10px;
+                }
+                
+                &:hover, &:active {
+                    background-color: $nav_link_active_bgcolor;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
+
+#currentPage {
+    background-color: $current_page_link_bgcolor;
+}
+
+.colLeft {
+    width: $col_left_width;
+    float: left;
+    margin: 10px 80px 0 60px;
+    min-height: $col_left_min_height;
+    
+    h3 {
+        text-align: center;
+        margin-top: 10px;
+        color: $left_col_h3_color;
+    }
+    
+    article {
+        margin-top: 40px;
+    }
+    
+    p {
+        padding: 10px 10px 0 10px;
+        text-align: justify;
+        
+        a {
+            &:link, &:visited {
+                text-decoration: none;
+                color: $col_left_p_links_color;
+            }  
+            &:hover, &:active {
+                font-style: italic;
+            }
+        }
+    }
+    
+    .instructions {
+        text-align: center;
+    }
+    
+}
+
+.colRight {
+    width: $col_right_width;
+    float: left;
+    margin: 30px 0 20px 0;
+    min-height: $col_right_min_height;
+    
+    #calcPNG {
+        margin: 85px auto 0px;
+        display: block;
+    }
+    
+    h3, h4 {
+        text-align: center;
+    }
+    
+    h3 {
+        color: $col_right_h3_color;
+    }
+   
+}
+
+.arithInput {
+    width: $arith_input_width;
+    padding-left: 37px;
+}
+
+.arithButtonsDiv {
+    width: $arith_buttons_div_width;
+    padding-left: 115px;
+    margin: 5px 0 0 0;
+}
+
+.arithButton {
+    width: $arith_button_width;
+    @include button;
+}
+
+.oneCol {
+    min-height: $one_col_min_height;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    float: left;
+    
+    #socialMediaMessage {
+        width: $social_media_message_width;
+        height: $social_media_message_height;
+        margin: 177px auto 0 230px;
+        text-align: center;
+        display: block;
+        float: left;
+        font-size: .9em;
+    }
+}
+
+.expenseButtonsDiv {
+    width: $expense_buttons_div_width;
+    padding-left: 30px;
+}
+
+.expenseButtons {
+    width: $expense_buttons_width;
+    @include button;
+    
+    
+}
+
+#budgetTotal {
+    display: block;
+    width: $budget_total_width;
+    margin: 5px auto;
+    text-align: center;
+}
+
+#expenses {
+    display: block;
+    width: $expenses_width;
+    margin: 5px auto;
+    text-align: center;
+}
+
+#leftOver {
+    display: block;
+    width: $left_over_width;
+    margin: 5px auto;
+    text-align: center;
+}
+
+.submit {
+    width: $submit_width;
+    @include button;
+    display: block;
+    margin: 0 auto;
+   
+    
+}
+
+.reset {
+    width: $reset_width;
+    @include button;
+    display: block;
+    margin: 0 auto;
+}
+
+#quickAddition, #quickSubtraction, #quickMult, #quickDiv {
+    width: $quick_width;
+    height: $quick_height;
+    float: left;
+}
+
+footer {
+    float: left; 
+    //clear: both;
+    width: $footer_width;
+    height: $footer_height;
+    margin: 20px 0 0 0;
+   
+}
+
+.quickCalc {
+    width: $quick_calc_width;
+    height: $quick_calc_height;
+    float: left;
+}
+
+.quickCalcInput {
+    text-align: center;
+    width: $quick_calc_input_width;
+    margin: 0px auto 5px;
+    display: block;
+}
+
+.quickCalcAnswer {
+    text-align: center;
+    display: block;
+    width: $quick_calc_answer_width;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#footLeft {
+    width: $foot_left_width;
+    height: $foot_left_height;
+    float: left;
+    
+    
+    h3, h4 {
+        text-align: center;
+        color: $foot_left_h3h4_color;
+    }
+}
+
+#footRight {
+    width: $foot_right_width;
+    height: $foot_right_height;
+    float: left;
+    overflow: hidden;
+}
+
+#contactUs {
+    margin: 0 0 10px 0;
+}
+
+.contactHeader {
+    text-align: center;
+    color: $contact_header_color;
+}
+
+.contactInfo {
+    text-align: center;
+    color: $contact_info_color;
+    font-size: 0.8em;
+}
+
+#socialMedia {
+    width: $social_media_width;
+    margin: 0 auto;
+    
+    p {
+        text-align: center;
+        color: $social_media_p_color;
+    }
+}
+
+#socialMediaLinks {
+    width: $social_media_links_width;
+    margin: 0 auto;
+    
+    &:link, &:visited, &:hover, &:active {
+        color: $social_media_links_color;
+        border-color: $social_media_links_border_color;
+    }
+}
+
+.quickQuizSection {
+    input {
+        width: $quick_quiz_section_input_width;
+        text-align: center;
+    }
+}
+
+#errorAlerts {
+    color: $red;
+    font-size: 1.2em;
+    font-weight: bold;
+    min-height: $quiz_alerts_min_height;
+    text-align: center;
+    padding-top: 1em;
+}
+
+#quickQuiz {
+    #submit {
+        width: $quick_quiz_submit_width;
+        @include button;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+}
+
+.quickQuizAnswers {
+    margin: 5px 0 0 0;
+    
+    input {
+        width: $quick_quiz_answers_input_width;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        
+    }
+}
+
+.decimalPlaces, #decimalPlaces { //@todo can these be combined?
+    color: $decimal_places_color;
+    text-align: center;
+    font-size: 0.7em;
+}
+
+#answer {
+    display: block;
+    margin: 5px auto 0 auto;
+    text-align: center;
+    width: $answer_width;
+}
+
+#browsers {
+    font-size: .8em;
+    margin-top: 45px;
+    text-align: center;
+    
+    .externalLink {
+        color: $external_link_color;
+    }
+}
+
+// Addition Page Styling //
+
+#additionMain {
+    display: block;
+    margin-top: 20px;
+    
+    input {
+        width: $addition_main_input_width;
+        text-align: center;
+    }
+    
+    .submit {
+        width: $addition_main_submit_width;
+        @include button;
+        margin-left: 90px;
+        margin-top: 10px;
+    }
+    
+}
+
+#additionMultiple {
+    #addMultiple {
+        width: $add_multiple_width;
+        text-align: center;
+        display: block;
+        margin: 20px auto 0 auto;
+    }
+    
+    .submit {
+        width: $add_multiple_submit_width;
+        @include button;
+        margin-top: 10px;
+    }
+}
+
+
+
+// Subtraction Page Styling //
+#subtractionMain {
+    display: block;
+    margin-top: 20px;
+    
+    input {
+        width: $subtraction_main_input_width;
+        text-align: center;
+    }
+    
+    .submit {
+        width: $subtraction_main_submit_width;
+        @include button;
+        margin-left: 75px;
+        margin-top: 10px;
+    }
+}
+
+#subtractionMultiple {
+    #subtractMultiple {
+        width: $subtract_multiple_width;
+        text-align: center;
+        display: block;
+        margin: 20px auto 0 auto;
+    }
+    
+    .submit {
+        width: $subtraction_multiple_submit_width;
+        @include button;
+        margin-top: 10px;
+        
+    }
+}
+
+// Multiplication Styling //
+#multiplicationMain {
+    display: block;
+    margin-top: 20px;
+    
+    input {
+        width: $multiplication_main_input_width;
+        text-align: center;
+    }
+    
+    .submit {
+        width: $multiplication_main_submit_width;
+        @include button;
+        margin-left: 65px;
+        margin-top: 10px;
+    }
+}
+
+#multiplicationMultiple { //@todo make a mixin for these
+    #multMultiple {
+        width: $mult_multiple_width;
+        text-align: center;
+        display: block;
+        margin: 20px auto 0 auto;
+      }
+      
+      .submit {
+          width: $mult_multiple_submit_width;
+          @include button;
+          margin-top: 10px;
+      } 
+}
+
+#multiplicationSign {
+    font-size: .75em;
+}
+
+// Division Styling //
+
+#divisionMain { //@todo make a mixin for these
+    display: block;
+    margin-top: 20px;
+    
+    input {
+        width: $division_main_input_width;
+        text-align: center;
+    }
+    
+    .submit {
+        width: $division_main_submit_width;
+        @include button;
+        margin-left: 60px;
+        margin-top: 10px;
+    }
+}
+
+#divisionMultiple {
+    #divMultiple {
+        width: $div_multiple_width;
+        text-align: center;
+        display: block;
+        margin: 20px auto 0 auto;
+    }
+    
+    .submit {
+        width: $div_multiple_submit_width;
+        @include button;
+        margin-top: 10px;
+    }
+}
