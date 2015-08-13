@@ -8,6 +8,22 @@ myApp.config(['$routeProvider', function($routeProvider) {
 			templateUrl: 'views/home.html',
 			controller: 'MathController'
 		}).
+		when('/addition', {
+			templateUrl: 'views/addition.html',
+			controller: 'MathController'
+		}).
+		when('/subtraction', {
+			templateUrl: 'views/subtraction.html',
+			controller: 'MathController'
+		}).
+		when('/multiplication', {
+			templateUrl: 'views/multiplication.html',
+			controller: 'MathController'
+		}).
+		when('/division', {
+			templateUrl: 'views/division.html',
+			controller: 'MathController'
+		}).
 		otherwise({
 			redirectTo: '/home'
 		});
