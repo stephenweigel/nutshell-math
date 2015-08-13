@@ -66,4 +66,10 @@ angular.module('myApp.directives')
 		restrict: 'E',
 		templateUrl: 'views/directives/subtraction_budget_form.html'
 	};
+})
+.directive('multiplicationMainForm', function() {
+	return {
+		restrict: 'E',
+		templateUrl: 'views/directives/multiplication_main_form.html'
+	};
 });
