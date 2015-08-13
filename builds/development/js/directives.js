@@ -36,4 +36,22 @@ angular.module('myApp.directives')
 		restrict: 'E',
 		templateUrl: 'views/directives/footer_div_calc.html'
 	};
+})
+.directive('quickQuiz', function() {
+	return {
+		restrict: 'E',
+		templateUrl: 'views/directives/quick_quiz.html'
+	};
+})
+.directive('additionMainForm', function() {
+	return {
+		restrict: 'E',
+		templateUrl: 'views/directives/addition_main_form.html'
+	};
+})
+.directive('additionMultipleForm', function() {
+	return {
+		restrict: 'E',
+		templateUrl: 'views/directives/addition_multiple_form.html'
+	};
 });
