@@ -54,4 +54,16 @@ angular.module('myApp.directives')
 		restrict: 'E',
 		templateUrl: 'views/directives/addition_multiple_form.html'
 	};
+})
+.directive('subtractionMainForm', function() {
+	return {
+		restrict: 'E',
+		templateUrl: 'views/directives/subtraction_main_form.html'
+	};
+})
+.directive('subtractionBudgetForm', function() {
+	return {
+		restrict: 'E',
+		templateUrl: 'views/directives/subtraction_budget_form.html'
+	};
 });
