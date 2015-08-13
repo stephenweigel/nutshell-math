@@ -72,4 +72,10 @@ angular.module('myApp.directives')
 		restrict: 'E',
 		templateUrl: 'views/directives/multiplication_main_form.html'
 	};
+})
+.directive('divisionMainForm', function() {
+	return {
+		restrict: 'E',
+		templateUrl: 'views/directives/division_main_form.html'
+	};
 });
