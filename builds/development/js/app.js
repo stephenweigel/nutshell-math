@@ -24,6 +24,9 @@ myApp.config(['$routeProvider', function($routeProvider) {
 			templateUrl: 'views/division.html',
 			controller: 'MathController'
 		}).
+		when('/socialmedia', {
+			templateUrl: 'views/social_media.html'
+		}).
 		otherwise({
 			redirectTo: '/home'
 		});
