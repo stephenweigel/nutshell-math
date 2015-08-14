@@ -52,5 +52,21 @@ myApp.controller('MathController', ['$scope', function($scope) {
 	$scope.multiply = function(x,y) {
 		return Number(x) * Number(y);
 	};
+
+	// Division
+
+	$scope.divide = function(x,y) {
+		var result = ( Number(x) / Number(y) );
+		if ( !result ) { 
+			return "";
+		} else if ( result % 1 !== 0 ) {
+			// Round to 2 decimal places
+			return parseFloat(Math.round(result * 100) / 100)
+				.toFixed(2);
+		} else if ( result % 1 === 0 ) {
+			// no rounding necessary
+			return result;
+		}
+	};
 	
 }]);
