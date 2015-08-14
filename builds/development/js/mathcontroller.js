@@ -46,5 +46,11 @@ myApp.controller('MathController', ['$scope', function($scope) {
 		$scope.expenses = "";
 		$scope.budget = "";
 	};
+
+	// Multiplication
+
+	$scope.multiply = function(x,y) {
+		return Number(x) * Number(y);
+	};
 	
 }]);
