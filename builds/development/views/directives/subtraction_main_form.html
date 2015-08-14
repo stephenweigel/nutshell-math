@@ -1,12 +1,15 @@
 <div class="arithInput">
-    <input type="text" name="x" id="x" placeholder="First Number (X)" required>
+    <input type="text" name="x" id="x" placeholder="First Number (X)" 
+    	ng-model="x">
     - 
-    <input type="text" name="y" id="y" placeholder="Second Number (Y)" required>
+    <input type="text" name="y" id="y" placeholder="Second Number (Y)" 
+    	ng-model="y">
     = 
-    <input type="text" name="z" id="z" placeholder="Answer" disabled>
+    <input type="text" name="z" id="z" placeholder="Answer" disabled
+    	value="{{subtraction(x,y) || x || y}}">
 </div><!--end arithInput-->
 
 <div class="arithButtonsDiv">
-    <input type="submit" value="Subtract Them" class="arithButton" >
-    <input type="reset" value="Reset" class="arithButton" > 
+    <input type="buttons" value="Reset" class="arithButton" 
+    	ng-click="resetMainForm()"> 
 </div><!--end arithButtons-->

@@ -1,4 +1,13 @@
 myApp.controller('MathController', ['$scope', function($scope) {
+	
+	$scope.resetMainForm = function() {
+		$scope.x = "";
+		$scope.y = "";
+		$scope.z = "";
+	};
+
+	// Addition
+
 	$scope.addition = function(x,y) {
 		return Number(x) + Number(y);
 	};
@@ -15,9 +24,27 @@ myApp.controller('MathController', ['$scope', function($scope) {
 		}
 	};
 
-	$scope.resetMainForm = function() {
-		$scope.x = "";
-		$scope.y = "";
-		$scope.z = "";
+	// Subtraction
+
+	$scope.subtraction = function(x,y) {
+		return Number(x) - Number(y);
 	};
+
+	$scope.remainingBudget = function() {
+		if ( $scope.expenses ) {
+			var total = $scope.budget || 0;
+			$.each($scope.expenses.split(' '), function() {
+				total -= Number(this);
+			});
+			return total;
+		} else {
+			return 'How Much is Left';
+		}
+	};
+
+	$scope.resetBudget = function() {
+		$scope.expenses = "";
+		$scope.budget = "";
+	};
+	
 }]);

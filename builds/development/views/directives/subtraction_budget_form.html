@@ -1,12 +1,14 @@
-<input type="text" name="budgetTotal" id="budgetTotal" placeholder="Budget" required>
+<input type="text" name="budgetTotal" id="budgetTotal" placeholder="Budget" 
+	ng-model="budget" required>
 
 Then enter your expenses (money spent), separated by a space: <br> 
      
-<input type="text" name="expenses" id="expenses" placeholder="Expenses" required>
+<input type="text" name="expenses" id="expenses" placeholder="Expenses" required
+	ng-model="expenses">
 
 <div class="expenseButtonsDiv">
-    <input type="submit" value="See How Much You Have Left" class="expenseButtons">
-    <input type="reset" value="Reset" class="expenseButtons"> 
+    <input type="button" value="Reset" class="expenseButtons" ng-click="resetBudget()"> 
 </div> <!--End expenseButtons-->
 
-<input type="text" name="leftOver" id="leftOver" placeholder="How Much is Left" disabled>
+<input type="text" name="leftOver" id="leftOver" placeholder="How Much is Left" disabled
+	value="{{remainingBudget() || budget }}">
