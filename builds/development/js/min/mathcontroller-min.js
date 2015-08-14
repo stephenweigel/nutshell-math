@@ -1,1 +1,1 @@
-myApp.controller("MathController",["$scope",function(o){}]);
+myApp.controller("MathController",["$scope",function(n){n.addition=function(n,r){return Number(n)+Number(r)},n.addMultiple=function(){if(n.xx){var r=0;return $.each(n.xx.split(" "),function(){r+=Number(this)}),r}return"Answer"},n.resetMainForm=function(){n.x="",n.y="",n.z=""}}]);
